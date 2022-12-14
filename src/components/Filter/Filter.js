@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { Container } from 'components/Filter/Filter.styled';
 import { nanoid } from 'nanoid';
 
-export const Filter = ({ value, onChange }) => {
+export default function Filter({ value, onChange }) {
   const nameInputId = nanoid();
   return (
     <Container>
@@ -18,7 +18,7 @@ export const Filter = ({ value, onChange }) => {
       </div>
     </Container>
   );
-};
+}
 Filter.propTypes = {
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
